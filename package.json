@@ -1,0 +1,29 @@
+{
+  "name": "bayesian-bandit",
+  "version": "0.9",
+  "description": "Bayesian bandit implementation for Node and the browser.",
+  "main": "./bayesian-bandit.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omphalos/bayesian-bandit.git"
+  },
+  "keywords": [
+    "machine",
+    "learning",
+    "bayes",
+    "bayesian",
+    "inference",
+    "multi-armed",
+    "n-armed",
+    "armed",
+    "bandit",
+    "reinforcement",
+    "learning",
+    "statistics"
+  ],
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.8.17"
+  },
+  "author": "omphalos"
+}
