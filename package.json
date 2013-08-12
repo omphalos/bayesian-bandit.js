@@ -1,6 +1,6 @@
 {
   "name": "bayesian-bandit",
-  "version": "0.9",
+  "version": "0.9.0",
   "description": "Bayesian bandit implementation for Node and the browser.",
   "main": "./bayesian-bandit.js",
   "repository": {
