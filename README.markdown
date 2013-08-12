@@ -4,7 +4,7 @@ This is an adaptation of the Bayesian Bandit code from [Probabilistic Programmin
 
 The code has been modified to be reusable in the browser or as an npm package.
 
-* Quick Start
+#Quick Start
 
 From node.js:
 
@@ -17,7 +17,7 @@ Then:
 
 In the browser:
 
-    <script src="//github.com/omphalos/bayesian-bandit/bayesian-bandit.js"></script>
+    <script src="https://raw.github.com/omphalos/bayesian-bandit.js/master/bayesian-bandit.js"></script>
 
 Sample JavaScript:
 
@@ -32,11 +32,11 @@ Sample JavaScript:
 
     bandit.selectArm() // Arm 1 is more likely, so this probably returns 1
 
-* Unit Tests
+#Unit Tests
 
-The unit tests use nodeunit, so you can set that up by typing:
+The unit tests use nodeunit.  You can set that up by typing:
 
-    npm install
+    npm install nodeunit
 
 Then you can run unit tests with:
 
