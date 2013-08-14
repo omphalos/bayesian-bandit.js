@@ -2,7 +2,7 @@
 
 This is an adaptation of the Bayesian Bandit code from [Probabilistic Programming and Bayesian Methods for Hackers](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/), specifically [d3bandits.js](https://raw.github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/master/Chapter6_Priorities/d3bandits.js).
 
-The code has been modified to be reusable in the browser or as an npm package.
+The code has been rewritten to be more idiomatic and also usable as a browser script or npm package.  Additionally, unit tests are included.
 
 #Quick Start
 
