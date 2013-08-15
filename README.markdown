@@ -40,4 +40,4 @@ The unit tests use nodeunit.  You can set that up by typing:
 
 Then you can run unit tests with:
 
-    node tests.js
+    nodeunit tests.js
