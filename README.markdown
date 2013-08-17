@@ -36,7 +36,7 @@ Sample JavaScript:
 
 The unit tests use nodeunit.  You can set that up by typing:
 
-    npm install nodeunit
+    npm install -g nodeunit
 
 Then you can run unit tests with:
 
