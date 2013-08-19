@@ -1,11 +1,11 @@
 {
   "name": "bayesian-bandit",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Bayesian bandit implementation for Node and the browser.",
   "main": "./bayesian-bandit.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/omphalos/bayesian-bandit.git"
+    "url": "https://github.com/omphalos/bayesian-bandit.js.git"
   },
   "keywords": [
     "machine",
