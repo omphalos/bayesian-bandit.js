@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/omphalos/bayesian-bandit.js.git"
   },
+  "scripts": {
+    "test": "NODE_ENV=test nodeunit tests.js"
+  },
   "keywords": [
     "machine",
     "learning",
@@ -25,5 +28,8 @@
   "engine": {
     "node": ">=0.8.17"
   },
-  "author": "omphalos"
+  "author": "omphalos",
+  "dependencies": {
+    "nodeunit": "^0.9.1"
+  }
 }

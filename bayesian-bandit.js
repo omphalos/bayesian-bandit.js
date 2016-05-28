@@ -6,7 +6,10 @@
   // Arm - one of the multi-armed bandit's arms, tracking observed rewards. //
   ////////////////////////////////////////////////////////////////////////////
 
-  function Arm() { }
+  function Arm(args) {
+    this.count = args && args.count || 0;
+    this.sum = args && args.sum || 0;
+  }
 
   Arm.prototype.count = 0
 
@@ -16,6 +19,11 @@
 
     this.count++
     this.sum += value
+  }
+
+  Arm.prototype.rewardMultiple = function(numTries, totalValue) {
+    this.count += numTries
+    this.sum += totalValue
   }
 
   Arm.prototype.sample = function() {
@@ -70,8 +78,14 @@
 
     this.arms = []
 
-    for(var a = 0; a < (options || {}).numberOfArms; a++) {
-      this.arms.push(new Arm())
+    if (!Array.isArray(options)) {
+      for (var a = 0; a < (options || {}).numberOfArms; a++) {
+        this.arms.push(new Arm())
+      }
+    } else {
+      for (var i = 0; i < options.length; i++) {
+        this.arms.push(new Arm(options[i]))
+      }
     }
   }
 
