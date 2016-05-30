@@ -32,12 +32,29 @@ Sample JavaScript:
 
     bandit.selectArm() // Arm 1 is more likely, so this probably returns 1
 
+If you have pre-existing data that you want to load, you can explicitly pass in data via constructor.
+The following creates a bandit with 3 arms 
+
+    var bandit = new Bandit({
+        arms: [{ count: 10, sum: 2 },
+                { count: 20, sum: 10 },
+                { count: 15: sum: 1}]
+    })
+
+You can also take advantage of the rewardMultiple function on the arms:
+
+    var bandit = new Bandit({ numberOfArms: 3 })
+    
+    bandit.arms[0].rewardMultiple(10, 2)  // Arm 0 wins 2 of 10 times
+    bandit.arms[1].rewardMultiple(20, 10) // Arm 1 wins 10 of 20 times 
+    bandit.arms[2].rewardMultiple(15, 1)  // Arm 2 wins 1 of 15 times
+
 #Unit Tests
 
-The unit tests use nodeunit.  You can set that up by typing:
+The unit tests use nodeunit, which should get installed with:
 
-    npm install -g nodeunit
+    npm install
 
 Then you can run unit tests with:
 
-    nodeunit tests.js
+    npm test
