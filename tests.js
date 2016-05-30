@@ -32,8 +32,8 @@ module.exports = testCase({
 
       var arm = new Bandit.Arm()
 
-      arm.rewardMultiple(10, 2);
-      arm.rewardMultiple(15, 5);
+      arm.rewardMultiple(10, 2)
+      arm.rewardMultiple(15, 5)
 
       test.equal(arm.count, 25)
       test.equal(arm.sum, 7)
@@ -150,17 +150,24 @@ module.exports = testCase({
       test.done()
     },
 
-    'new Bandit with array should create the arms initialized properly': function(test) {
+    'new Bandit with options.arms should initialized arms properly': 
+        function(test) {
 
-      var bandit = new Bandit([{count: 100, sum: 20},{count: 50, sum: 30},{count:70, sum: 10}])
+      var bandit = new Bandit({
+        arms:[
+          {count: 100, sum: 20},
+          {count: 50,  sum: 30},
+          {count: 70,  sum: 10}
+        ]
+      })
 
       test.equal(bandit.arms.length, 3)
-      test.equal(bandit.arms[0].count, 100);
-      test.equal(bandit.arms[0].sum, 20);
-      test.equal(bandit.arms[1].count, 50);
-      test.equal(bandit.arms[1].sum, 30);
-      test.equal(bandit.arms[2].count, 70);
-      test.equal(bandit.arms[2].sum, 10);
+      test.equal(bandit.arms[0].count, 100)
+      test.equal(bandit.arms[0].sum, 20)
+      test.equal(bandit.arms[1].count, 50)
+      test.equal(bandit.arms[1].sum, 30)
+      test.equal(bandit.arms[2].count, 70)
+      test.equal(bandit.arms[2].sum, 10)
       test.done()
 
     },

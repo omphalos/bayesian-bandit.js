@@ -8,7 +8,7 @@
     "url": "https://github.com/omphalos/bayesian-bandit.js.git"
   },
   "scripts": {
-    "test": "NODE_ENV=test nodeunit tests.js"
+    "test": "nodeunit tests.js"
   },
   "keywords": [
     "machine",
@@ -29,7 +29,7 @@
     "node": ">=0.8.17"
   },
   "author": "omphalos",
-  "dependencies": {
+  "devDependencies": {
     "nodeunit": "^0.9.1"
   }
 }
