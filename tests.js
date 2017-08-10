@@ -4,7 +4,6 @@ var testCase = require('nodeunit').testCase
 module.exports = testCase({
 
   'Arm': testCase({
-
     'reward should increase the count': function(test) {
 
       var arm = new Bandit.Arm()
@@ -252,3 +251,14 @@ function pullArms(options) {
     arm.reward(Math.random() < arm.probability ? 1 : 0)
   }
 }
+
+/**
+function alextest(a,b,n){
+// test beta(1,1)
+var arm = new Bandit.Arm()
+    for(var i = 0; i < n; i++){
+    console.log(arm.rbeta(a,b))}
+    }
+
+alextest(2e3,1e5,10000)
+**/
