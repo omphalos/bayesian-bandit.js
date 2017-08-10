@@ -1,3 +1,5 @@
+var jStat = require('jStat').jStat;
+
 (function(exports) {
 
   'use strict'
@@ -52,21 +54,13 @@
    * @param {int} a
    * @param {int} b
    * @returns {number} - number between 0 and 1
-   *
-   * Adapted from https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/master/Chapter6_Priorities/d3bandits.js,
-   * which references Simulation and MC, Wiley.
-   *
-   * This apparently generates random numbers from a beta distribution:
-   * http://en.wikipedia.org/wiki/Beta_distribution
-   * I don't really know why this works -- it's just adapted from d3bandits.js
-   *
-   * For comparison, you might want to review the R project's rbeta code:
-   * https://svn.r-project.org/R/trunk/src/nmath/rbeta.c
-   *
+   * 
+   * The commented out code is incorrect and instead adopted the
+   *jState library to sample the beta distribution.
    */
   Arm.prototype.rbeta = function(a, b) {
 
-    var sum = a + b
+/**    var sum = a + b
       , ratio = a / b
       , min = Math.min(a, b)
       , lhs, rhs, y, r1, r2, lambda
@@ -89,6 +83,8 @@
     } while(lhs >= rhs)
 
     return ratio * y / (1 + ratio * y)
+**/
+    return jStat.beta.sample(a,b);
   }
 
   Arm.prototype.random = Math.random;
